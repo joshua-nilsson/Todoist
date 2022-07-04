@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "firebase": "^7.15.2",
-    "moment": "^2.27.0",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0",
-    "react-scripts": "3.4.1"
+    "firebase": "^9.8.4",
+    "moment": "^2.29.3",
+    "node-sass": "^7.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@testing-library/react": "^10.3.0",
