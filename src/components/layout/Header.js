@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { AddTask } from '../AddTask';
+import Modal from '../Modal';
 
 export const Header = ({ darkMode, setDarkMode }) => {
   const [shouldShowMain, setShouldShowMain] = useState(false);
@@ -15,6 +16,9 @@ export const Header = ({ darkMode, setDarkMode }) => {
         </div>
         <div className="settings">
           <ul>
+            <li>
+              <Modal />
+            </li>
             <li className="settings__add">
               <button
                 data-testid="quick-add-task-action"
