@@ -209,6 +209,10 @@ header {
           vertical-align: middle;
           float: left;
 
+		  &:first-of-type {
+			margin-right: 0.75rem;
+		  }
+
           &:hover {
             border-radius: 3px;
             background-color: rgba(255,255,255,0.2);
@@ -718,3 +722,211 @@ header {
     @include cancel();
   }
 }
+
+/* Modal
+  ============================================ */
+	.modal {
+		&__button {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			background: transparent;
+			border: none;
+			border-radius: 0.25rem;
+			font-weight: 600;
+			cursor: pointer;
+
+			@media (min-width: 1280px) {
+				justify-content: flex-start;
+			}
+
+			&Icon {
+				width: 1.5rem;
+				height: 1.5rem;
+				color: #FFF;
+				transition: all 0.1s linear;
+			}
+		}
+
+		&__dialog {
+			&Title {
+				margin-top: 0;
+				color: #111827;
+				font-size: 1.125rem;
+				font-weight: 600;
+				line-height: 1.5rem;
+
+				svg {
+					position: relative;
+					top: -0.125rem;
+					margin-right: 0.25rem;
+				}
+			}
+
+			&Icon {
+				display: inline;
+				position: relative;
+				top: -0.15rem;
+				width: 1.125rem;
+				height: 1.125rem;
+				vertical-align: middle;
+				color: #db4c3f;
+			}
+
+			&Frame {
+				margin-top: 1rem;
+			}
+
+			&Disclaimer, &Clarification {
+				color: #6b7280;
+				font-size: 0.875rem;
+				line-height: 1.25rem;
+			}
+
+			&Clarification {
+				margin-top: 1.25rem;
+			}
+
+			&Button {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1rem;
+				padding: 0.5rem 1rem;
+				color: #fff;
+				background: #db4c3f;
+				border-width: 1px;
+				border-color: transparent;
+				border-radius: 0.375rem;
+				font-size: 0.875rem;
+				font-weight: 500;
+				line-height: 1.25rem;
+				cursor: pointer;
+				transition: all 0.1s linear;
+
+				&:hover {
+					opacity: 0.75;
+				}
+
+				@media (min-width: 425px) {
+					display: inline-flex;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__toggle {
+			&Frame {
+				margin-left: 0;
+				-webkit-user-select: none; /* Safari */
+				user-select: none;
+
+				.react-toggle,
+				.react-toggle-track,
+				.react-toggle.inactive:hover .react-toggle-track {
+					background-color: #e5e7eb;
+				}
+
+				.react-toggle--focus .react-toggle-thumb,
+				.react-toggle:active .react-toggle-thumb {
+					box-shadow: none;
+				}
+
+				.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+					box-shadow: none;
+				}
+
+				.react-toggle.active:hover .react-toggle-track,
+				.active .react-toggle-track {
+					background-color: #db4c3f;
+				}
+
+				.inactive {
+					background-color: #db4c3f;
+				}
+
+				.react-toggle {
+					margin-right: 0.5rem;
+				}
+
+				.react-toggle:focus-within {
+					outline: -webkit-focus-ring-color auto 2px;
+					outline: 2px solid black;
+				}
+
+				.react-toggle-thumb {
+					top: 4px;
+					left: 5px;
+					border: none;
+					width: 16px;
+					height: 16px;
+				}
+
+				.react-toggle--checked .react-toggle-track {
+					background-color: #db4c3f;
+				}
+
+				.react-toggle--checked .react-toggle-thumb {
+					top: 4px;
+					left: 24px;
+				}
+
+				.active,
+				.inactive {
+					display: inline-flex;
+					align-items: center;
+					position: relative;
+					vertical-align: middle;
+					width: 2.75rem;
+					height: 1.5rem;
+					border-radius: 9999px;
+				}
+
+				span {
+					color: #6b7280;
+					font-size: 0.875rem;
+					font-weight: 600;
+					line-height: 1.25rem;
+				}
+
+				@media (min-width: 425px) {
+					margin-left: 1rem;
+				}
+			}
+
+			&Message {
+				-webkit-user-select: none; /* Safari */
+				user-select: none;
+			}
+		}
+	}
+
+	.ReactModal__Overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		inset: 0px;
+		padding: 1rem;
+		min-height: 100%;
+		background-color: rgba(0, 0, 0, 0.75) !important;
+	}
+
+	.ReactModal__Content {
+		width: 100%; 
+		max-width: 28rem; 
+		padding: 1.5rem; 
+		vertical-align: middle; 
+		text-align: left; 
+		background-color: #ffffff; 
+		opacity: 1;
+		overflow: hidden; 
+		border-radius: 1rem; 
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+		transition-property: all; 
+		--transform-scale-x: 1;
+		--transform-scale-y: 1;
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
